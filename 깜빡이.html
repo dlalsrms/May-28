@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1> traffic signal </h1>
+
+<input type="radio" id="radio1" style="accent-color:red; width:100px; height:100px;">
+<input type="radio" id="radio2" style="accent-color:yellow; width:100px; height:100px;">
+<input type="radio" id="radio3" style="accent-color:green; width:100px; height:100px;">
+<input type="radio" id="radio4" style="accent-color:orange; width:100px; height:100px;">
+
+	<script>
+	setInterval(timer_fnc,1000);
+	step=1;
+	function timer_fnc()
+	{
+	switch(step){
+		case 1:
+			document.getElementById('radio1').checked = true;
+			document.getElementById('radio2').checked = false;
+			document.getElementById('radio3').checked = false;
+			document.getElementById('radio4').checked = false;
+			step=2;
+		break;
+		case 2:
+			document.getElementById('radio1').checked = false;
+			document.getElementById('radio2').checked = true;
+			document.getElementById('radio3').checked = false;
+			document.getElementById('radio4').checked = false;
+			step=3;
+		break;
+		case 3:
+			document.getElementById('radio1').checked = false;
+			document.getElementById('radio2').checked = false;
+			document.getElementById('radio3').checked = true;
+			document.getElementById('radio4').checked = false;
+			step=4;
+		break;
+		case 4:
+			document.getElementById('radio1').checked = false;
+			document.getElementById('radio2').checked = false;
+			document.getElementById('radio3').checked = false;
+			document.getElementById('radio4').checked = true;
+			step=1;
+		break;
+	}
+}
+	</script>
+</head>
+<body>
+	<script>
+	</script>
+</body>
+</html>
